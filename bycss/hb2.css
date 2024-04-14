@@ -46,23 +46,42 @@
             margin-right: 10px;
         }
 
-        /* 汉堡按钮样式 */
-        .hamburger {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            z-index: 999; /* 确保按钮位于最上层 */
-            transition: all 0.3s ease; /* 添加过渡效果 */
-        }
-        .hamburger span {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: #333;
-            margin: 6px auto;
-            transition: all 0.3s ease; /* 添加过渡效果 */
-        }
+    
+/* 汉堡按钮样式 */
+.hamburger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999; /* 确保按钮位于最上层 */
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    background-color: transparent; /* 使按钮背景透明 */
+    border: none; /* 移除按钮边框 */
+    padding: 0; /* 移除按钮内边距 */
+}
+
+.hamburger span {
+    display: block;
+    width: 30px; /* 保持原尺寸 */
+    height: 3px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 汉堡按钮激活状态样式 */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg); /* 旋转45度，并向下移动一定距离 */
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* 隐藏中间条 */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg); /* 旋转-45度，并向上移动一定距离 */
+}
+
 
         /* 主要内容区域样式 */
         .w_width {

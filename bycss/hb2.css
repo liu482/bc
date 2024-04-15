@@ -30,6 +30,20 @@
             display: flex;
             align-items: center;
         }
+      .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px; /* 可以根据需要调整文字和图片之间的间距 */
+}
+
+.logo span {
+    font-size: 16px; /* 根据需要调整文字大小 */
+    color: #333; /* 根据需要调整文字颜色 */
+}
         .menu li {
             margin: 0 15px;
         }
